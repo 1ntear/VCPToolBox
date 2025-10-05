@@ -1,1 +1,6 @@
+# nixpacks.toml
 
+[phases.setup]
+# "..." 语法至关重要。它告诉 Nixpacks 首先安装 Node.js 环境所需的默认软件包，
+# 然后再额外添加 ffmpeg。这确保了基础环境的完整性。
+nixPkgs = ["...", "ffmpeg"]
